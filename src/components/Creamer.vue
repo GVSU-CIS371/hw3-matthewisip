@@ -1,18 +1,14 @@
 <template>
   <div class="froth">
-    <div
-      v-for=" in 5"
-      class="foam"
-      :style="{ backgroundColor: beverageStore.currentCreamer?.color }"
-    ></div>
+    <div v-for=" in 5" class="foam" :style = "{ backgroundColor: beverageStore.currentCream?.color }"></div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useBeverageStore } from "../stores/beverageStore";
-
-const beverageStore = useBeverageStore();
+  import { useBeverageStore } from "../stores/beverageStore";
+  const beverageStore = useBeverageStore();
 </script>
+
 <style lang="scss" scoped>
 .froth {
   overflow: visible;
